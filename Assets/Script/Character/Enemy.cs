@@ -17,13 +17,20 @@ public class Enemy : Character, IInteractable
     public string InteractionText => interactionText;
 
     public event Action OnDead;
+    [SerializeField] private bool deadDestroy = false;
 
     [SerializeField] private string nextChapterName = "Chapter";
 
     public void Interact(Player player)
     {
         OnDead?.Invoke();
-        director?.Play();
+        if(director != null)
+            director?.Play();
+
+        if (deadDestroy)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnEnable()
@@ -40,7 +47,6 @@ public class Enemy : Character, IInteractable
 
     private void OnCutsceneEnd(PlayableDirector d)
     {
-        Debug.Log("ÄÆ½Å ³¡");
         FadeManager.Instance.LoadSceneWithFade(nextChapterName);
     }
 }

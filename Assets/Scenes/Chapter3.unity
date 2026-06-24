@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textUI: {fileID: 440933903}
-  typingSpeed: 0.1
+  typingSpeed: 0.05
 --- !u!224 &502671458
 RectTransform:
   m_ObjectHideFlags: 0
@@ -306,7 +306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 376, y: 335.7}
+  m_AnchoredPosition: {x: 427.92, y: 347}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &502671459
@@ -581,7 +581,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6569198374404131764, guid: 8b711d856cd48f74bae7fa7227751808, type: 3}
+  m_Sprite: {fileID: 9085184763745893619, guid: 1eaf231ebefb6144cb533f74b5bb6ce2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -631,16 +631,19 @@ MonoBehaviour:
   storyTMP: {fileID: 440933903}
   textDelay: 0.04
   enemy: {fileID: 1063488736}
-  storyText: "\uC61B\uB0A0 \uC61B\uB0A0\uC5D0 \uC544\uAE30 \uB3FC\uC9C0 \uC0BC\uD615\uC81C\uAC00\r\n\uC9D1\uC744
-    \uC9C0\uC5B4 \uD3C9\uD654\uB86D\uAC8C \uC0B4\uACE0 \uC788\uC5C8\uC5B4\uC694.\r\n\r[wait
-    0.6]\n\uADF8\uB7F0\uB370 \uC5B4\uB290 \uB0A0, [remove \uB291\uB300 0.5][spawn]\uBE68\uAC04\uB9DD\uD1A0\uAC00\r\n\uC544\uAE30
-    \uB3FC\uC9C0 \uC0BC\uD615\uC81C\uC758 \uC9D1\uC744 \uBD80\uC234\uBC84\uB838\uC5B4\uC694!\r\n\r[wait
-    0.6]\n\uC5B4\uB77C? \uB291\uB300\uAC00 \uC544\uB2C8\uACE0 \uBE68\uAC04\uB9DD\uD1A0\uB77C\uACE0\uC694?\r\n\uC6B0\uB9AC\uAC00
+  storyText: "\uC61B\uB0A0 \uC61B\uB0A0\uC5D0 \uAE08\uBC15 \uC655\uC790\uAC00 \uC11C\uC788\uC5C8\uC5B4\uC694.\r\n\r[wait
+    0.6]\n\uAE08\uBC15 \uC655\uC790 \uB3D9\uC0C1\uC740\n\uBE5B\uB098\uB294 \uC790\uC2E0\uACFC
+    \uB2E4\uB974\uAC8C,\r\n\uB9C8\uC744\uC758 \uC8FC\uBBFC\uB4E4\uC758 \uC5BC\uAD74\uC740\n\uC5B4\uB450\uC6B4
+    \uAC83 \uAC19\uB2E4\uACE0 \uB290\uAF08\uC5B4\uC694.\r\n\r[wait 0.6]\n\uC655\uC790\uC758
+    \uB9C8\uC744\uC744 \uC11C\uB458\uB7EC \uC9C0\uB098\uAC00\uB294\n\uC81C\uBE44\uAC00
+    \uC788\uC5C8\uC5B4\uC694.\r\n\uADF8 \uC81C\uBE44\uB294 [remove \uC26C\uAE30\uC704\uD574
+    0.5][spawn]\uC26C\uC9C0 \uC54A\uACE0 \uB0A0\uC544\uAC14\uC5B4\uC694.\r\n\r[wait
+    0.6]\n\uC5B4\uB77C? \uC81C\uBE44\uAC00 \uC655\uC790\uB97C \uC9C0\uB098\uCCE4\uB2E4\uACE0\uC694?\r\n\uC6B0\uB9AC\uAC00
     \uC54C\uACE0 \uC788\uB294 \uB3D9\uD654\uB791\n\uB9CE\uC774 \uB2E4\uB978 \uAC83
     \uAC19\uB124\uC694.\r\n\r[wait 0.6]\n\uB3D9\uD654 \uC18D \uC774\uC57C\uAE30\uB97C
     \uC9C0\uD0A4\uAE30 \uC704\uD574\r\n\uC6B0\uB9AC\uAC00 \uB098\uC11C\uC57C \uD560
     \uCC28\uB840\uC778 \uAC83 \uAC19\uC544\uC694![wait 0.6]"
-  stageSceneName: Stage1
+  stageSceneName: Stage3
 --- !u!4 &1053994921
 Transform:
   m_ObjectHideFlags: 0
@@ -690,8 +693,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -338, y: 17}
-  m_SizeDelta: {x: 218.75, y: 387.5}
+  m_AnchoredPosition: {x: -472.7703, y: -120}
+  m_SizeDelta: {x: 239.2094, y: 380.6802}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1063488738
 MonoBehaviour:
@@ -706,15 +709,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.91372555, g: 0.86274517, b: 0.8431373, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6273823281228098253, guid: c48bda8f5e762a945b46f053e76c4591, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

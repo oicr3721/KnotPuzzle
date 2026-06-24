@@ -9,7 +9,7 @@ public class ChapterStory : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI storyTMP;
     [SerializeField] private float textDelay = 0.04f;
-    [SerializeField] private GameObject enemy;
+    [SerializeField] private GameObject enemy =null;
 
     [TextArea]
     [SerializeField] private string storyText;
@@ -20,7 +20,7 @@ public class ChapterStory : MonoBehaviour
 
     private void Start()
     {
-        enemy.SetActive(false);
+        enemy?.SetActive(false);
         StartCoroutine(Run());
     }
 
@@ -108,7 +108,7 @@ public class ChapterStory : MonoBehaviour
     // =========================
     private IEnumerator SpawnEnemy()
     {
-        enemy.SetActive(true);
+        enemy?.SetActive(true);
 
         Transform t = enemy.transform;
 
