@@ -130,7 +130,7 @@ public class TutorialManager : MonoBehaviour
     {
         yield return new WaitForSeconds(endDelay);
 
-        FadeManager.Instance.LoadSceneWithFade("Stage1");
+        FadeManager.Instance.LoadSceneWithFade("Chapter1");
 
     }
 }

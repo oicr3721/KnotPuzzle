@@ -15,6 +15,13 @@ public class TypewriterEffect : MonoBehaviour
         StartCoroutine(TypeText(message));
     }
 
+    public void Clear()
+    {
+        StopAllCoroutines();
+        textUI.text = "";
+        textUI.maxVisibleCharacters = 0;
+    }
+
     private bool isTyping;
     private IEnumerator TypeText(string message)
     {

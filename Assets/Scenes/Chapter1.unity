@@ -158,8 +158,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC61B\uB0A0 \uC61B\uB0A0 \uC544\uAE30 \uB3FC\uC9C0 \uC0BC\uD615\uC81C\uAC00\n\uC0B4\uACE0
-    \uC788\uC5C8\uC2B5\uB2C8\uB2E4...\n"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f515018f02c3fb4490fb0840c4dc9eb, type: 2}
   m_sharedMaterial: {fileID: 6833059328596921622, guid: 2f515018f02c3fb4490fb0840c4dc9eb, type: 2}
@@ -629,16 +628,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d96f216773cf14f42ac79dc400bb9493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  writer: {fileID: 502671457}
+  storyTMP: {fileID: 440933903}
+  textDelay: 0.04
   enemy: {fileID: 1063488736}
-  lines:
-  - text: "\uC61B\uB0A0 \uC61B\uB0A0 \uC544\uAE30 \uB3FC\uC9C0 \uC0BC\uD615\uC81C\uAC00\n\uC0B4\uACE0
-      \uC788\uC5C8\uC2B5\uB2C8\uB2E4..."
-    spawnEnemy: 0
-    delayAfterText: 0
-  - text: "\uADF8\uB7EC\uB358 \uC5B4\uB290 \uB0A0\n\uB291\uB300\uAC00 \uB098\uD0C0\uB098\uC11C"
-    spawnEnemy: 0
-    delayAfterText: 0
+  storyText: "\uC61B\uB0A0 \uC61B\uB0A0 \uC544\uAE30 \uB3FC\uC9C0 \uC0BC\uD615\uC81C\uAC00\n\uC0B4\uACE0
+    \uC788\uC5C8\uC2B5\uB2C8\uB2E4[wait 0.04].[wait 0.04].[wait 0.04].[wait 0.04]\n\n\uADF8\uB7F0\uB370
+    [remove \uB291\uB300 0.6][spawn]\uBE68\uAC04\uB9DD\uD1A0\uAC00 \uB098\uD0C0\uB098
+    \n\uC0AC\uB791\uC2A4\uB7F0 \uC544\uAE30\uB3FC\uC9C0\uC0BC\uD615\uC81C\uB4E4\uC744
+    \n\uC704\uD611\uD558\uAE30 \uC2DC\uC791\uD588\uC2B5\uB2C8\uB2E4!!!!!\n[wait 0.4]"
+  stageSceneName: Stage1
 --- !u!4 &1053994921
 Transform:
   m_ObjectHideFlags: 0
@@ -671,7 +669,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1063488737
 RectTransform:
   m_ObjectHideFlags: 0
