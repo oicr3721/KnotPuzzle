@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
+
 public enum PlayerState
 {
     None,
@@ -39,6 +40,9 @@ public class Player : Character
     [Header("Component")]
     [SerializeField] private GameObject darknessMask;
 
+    [SerializeField] private AudioClip knotSound;
+    private AudioSource audioSource;
+
     public static event Action OnRopeReady;
     public static event Action OnRopeConnected;
     public static event Action OnRopeUsed;
@@ -61,6 +65,11 @@ public class Player : Character
 
     public Dictionary<KnotType, bool> KnotState => knotState;
 
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     private void Awake()
     {
         if (Instance == null)
@@ -82,6 +91,8 @@ public class Player : Character
 
     public IEnumerator CompleteRopeConnect()
     {
+        audioSource.PlayOneShot(knotSound); 
+
         yield return StartCoroutine(knotSelector.SelectUseKnot());
 
         ropeHolder = null;
@@ -89,6 +100,8 @@ public class Player : Character
 
         OnRopeConnected?.Invoke();
         animator.SetTrigger("Tie");
+
+        
     }
 
     public void CancleRopeConnect()
@@ -101,6 +114,7 @@ public class Player : Character
 
     public void GetKnot()
     {
+        audioSource.PlayOneShot(knotSound);
         StartCoroutine(knotSelector.SelectGetKnot());
     }
 

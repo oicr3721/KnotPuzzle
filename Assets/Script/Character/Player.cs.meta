@@ -3,7 +3,20 @@ guid: dbcdcda3550c04c41b26693eaad5b882
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - spriteRenderer: {instanceID: 0}
+  - animator: {instanceID: 0}
+  - knotSelector: {instanceID: 0}
+  - normal: {instanceID: 0}
+  - noEye: {instanceID: 0}
+  - noArm: {instanceID: 0}
+  - noLeg: {instanceID: 0}
+  - noEye_Arm: {instanceID: 0}
+  - noEye_Leg: {instanceID: 0}
+  - noArm_Leg: {instanceID: 0}
+  - noEye_Arm_Leg: {instanceID: 0}
+  - darknessMask: {instanceID: 0}
+  - knotSound: {fileID: 8300000, guid: cfac566a6d83f7344af037f250035482, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
