@@ -7,6 +7,8 @@ public class TypewriterEffect : MonoBehaviour
     [SerializeField] private TMP_Text textUI;
     [SerializeField] private float typingSpeed = 0.05f;
 
+    public bool IsTyping => isTyping;
+
     public void StartTyping(string message)
     {
         StopAllCoroutines();
