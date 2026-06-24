@@ -16,6 +16,9 @@ public class PlayerInteractor : MonoBehaviour
     [SerializeField] private GameObject interactionPrompt;
     [SerializeField] private TextMeshProUGUI interactionText;
 
+    [SerializeField] private Sprite enableSprite;
+    [SerializeField] private Sprite disableSprite;
+    private SpriteRenderer mouseRenderer;
 
     private bool canInteract =>
         (player.PlayerState == PlayerState.None);
@@ -26,6 +29,11 @@ public class PlayerInteractor : MonoBehaviour
     private void Awake()
     {
         cam = Camera.main;
+    }
+
+    private void Start()
+    {
+        mouseRenderer = mousePoint.GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -102,9 +110,16 @@ public class PlayerInteractor : MonoBehaviour
         }
 
         if (target != null)
+        {
             UpdateUI();
+            mouseRenderer.sprite = enableSprite;
+        }
         else
+        {
             HideUI();
+            mouseRenderer.sprite = disableSprite;
+        }
+           
     }
 
     private void UpdateUI()
@@ -116,6 +131,7 @@ public class PlayerInteractor : MonoBehaviour
 
         interactionPrompt.transform.position =
             mousePoint.position + Vector3.up * 0.5f;
+
     }
 
     private void HideUI()

@@ -11,6 +11,7 @@ public class MovingPlatform : MonoBehaviour
     private Vector3 targetPos;
     private bool movingRight = true;
 
+    [SerializeField]
     private bool moving = false;
 
     private void Start()

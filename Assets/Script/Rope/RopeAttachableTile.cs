@@ -23,6 +23,9 @@ public class RopeAttachableTile : MonoBehaviour, IRopeAttachable, IInteractable
     public RopeBridge AttachedRopeBridge => attachedRopeBridge;
 
     [SerializeField] private RopeDir ropeDir;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Sprite attachedSprite;
+    [SerializeField] private Sprite normalSprite;
     public RopeDir RopeDir => ropeDir;
 
     public void Interact(Player player)
@@ -40,12 +43,15 @@ public class RopeAttachableTile : MonoBehaviour, IRopeAttachable, IInteractable
 
     public void OnRopeBridgeAttached(RopeBridge bridge)
     {
+        spriteRenderer.sprite = attachedSprite;
         attachedRopeBridge = bridge;
     }
 
     public void OnRopeBridgeDetached(RopeBridge bridge)
     {
-        if(attachedRopeBridge == bridge)
-            attachedRopeBridge = null;
+        if (attachedRopeBridge != bridge) return;
+
+        spriteRenderer.sprite = normalSprite;
+        attachedRopeBridge = null;
     }
 }

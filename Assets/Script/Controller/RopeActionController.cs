@@ -1,7 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SocialPlatforms;
 
 public class RopeActionController : MonoBehaviour
 {
@@ -12,6 +11,10 @@ public class RopeActionController : MonoBehaviour
     [SerializeField] private Transform mousePoint;
     [SerializeField] private float targetDetectRadius = 0.3f;
 
+    [SerializeField] private Sprite enableSprite;
+    [SerializeField] private Sprite disableSprite;
+
+    private SpriteRenderer mouseRenderer;
     private Camera cam;
 
     private IRopeAttachable target;
@@ -21,12 +24,22 @@ public class RopeActionController : MonoBehaviour
         cam = Camera.main;
     }
 
+    private void Start()
+    {
+        mouseRenderer = mousePoint.GetComponent<SpriteRenderer>();
+    }
+
     private void Update()
     {
         if (player.PlayerState != PlayerState.RopeReady) return;
 
         UpdateUI();
         UpdateTarget();
+
+        if(target != null)
+            mouseRenderer.sprite = enableSprite;
+        else
+            mouseRenderer.sprite = disableSprite;
     }
 
     private void UpdateUI()
