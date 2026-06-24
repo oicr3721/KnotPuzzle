@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework.Constraints;
 
 public class RopeBridge : MonoBehaviour, IInteractable
 {
@@ -132,6 +133,19 @@ public class RopeBridge : MonoBehaviour, IInteractable
     {
         player.SetPlayerState(PlayerState.RopeWalk);
 
+        string animationBoolText = "";
+        switch(ropeDir)
+        {
+            case RopeDir.Horizontal:
+                animationBoolText = "Moving";
+                break;
+            case RopeDir.Vertical:
+                animationBoolText = "Climbing";
+                break;
+        }
+
+        player.Animator.SetBool(animationBoolText, true);
+
         // 필요하면 플레이어 컨트롤 잠금
         float t = 0f;
         float duration = 1.5f; // 이동 속도
@@ -161,6 +175,8 @@ public class RopeBridge : MonoBehaviour, IInteractable
         player.enabled = true;
 
         player.SetPlayerState(PlayerState.None);
+
+        player.Animator.SetBool(animationBoolText, false);
     }
     private void SnapToEndTop(Player player, Transform end)
     {

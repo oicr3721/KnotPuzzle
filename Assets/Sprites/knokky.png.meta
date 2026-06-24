@@ -1,0 +1,612 @@
+fileFormatVersion: 2
+guid: 626047a84ef931145a11af69dfd6ad77
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4653182581575468152
+    second: knokky_0
+  - first:
+      213: -2334434040848662015
+    second: knokky_1
+  - first:
+      213: 7153655348779792283
+    second: knokky_2
+  - first:
+      213: 2529363443818896156
+    second: knokky_3
+  - first:
+      213: 6160424658747142796
+    second: knokky_4
+  - first:
+      213: -6667487873818475508
+    second: knokky_5
+  - first:
+      213: 1356725747495379220
+    second: knokky_6
+  - first:
+      213: -4221842490136734348
+    second: knokky_7
+  - first:
+      213: -1749125966365627615
+    second: knokky_8
+  - first:
+      213: -1834596977921294394
+    second: knokky_9
+  - first:
+      213: -9175647376179373457
+    second: knokky_10
+  - first:
+      213: 3832764270698650827
+    second: knokky_11
+  - first:
+      213: -1881207806603996071
+    second: knokky_12
+  - first:
+      213: -3384289778303024658
+    second: knokky_13
+  - first:
+      213: 1715405844736098184
+    second: knokky_14
+  - first:
+      213: -2883541436959553820
+    second: knokky_15
+  - first:
+      213: 295812418549972935
+    second: knokky_16
+  - first:
+      213: -5123053061404741576
+    second: knokky_17
+  - first:
+      213: 4573783928610543984
+    second: knokky_18
+  - first:
+      213: 8546962709330312695
+    second: knokky_19
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: knokky_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 180
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88bb82e78139c6fb0800000000000000
+      internalID: -4653182581575468152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knokky_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 180
+        width: 27
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 102c2a3bb9c6a9fd0800000000000000
+      internalID: -2334434040848662015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knokky_2
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 180
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b97b79553a3e64360800000000000000
+      internalID: 7153655348779792283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knokky_3
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 180
+        width: 27
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b1fa8a6aa1a1320800000000000000
+      internalID: 2529363443818896156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knokky_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 138
+        width: 25
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c823e2a76993e7550800000000000000
+      internalID: 6160424658747142796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knokky_5
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 138
+        width: 27
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0443d8ca135873a0800000000000000
+      internalID: -6667487873818475508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knokky_6
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 138
+        width: 25
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 411a61d01ee04d210800000000000000
+      internalID: 1356725747495379220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knokky_7
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 138
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 475dfbd9f900965c0800000000000000
+      internalID: -4221842490136734348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knokky_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 66
+        width: 27
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12b6d5b633bd9b7e0800000000000000
+      internalID: -1749125966365627615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knokky_9
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 66
+        width: 27
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cffef8c4c33a86e0800000000000000
+      internalID: -1834596977921294394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knokky_10
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 67
+        width: 27
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6a5596735d89a080800000000000000
+      internalID: -9175647376179373457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knokky_11
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 67
+        width: 27
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcc5dce1cc6b03530800000000000000
+      internalID: 3832764270698650827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knokky_12
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 6
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9545daa877b94e5e0800000000000000
+      internalID: -1881207806603996071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knokky_13
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 6
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee1434b90669801d0800000000000000
+      internalID: -3384289778303024658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knokky_14
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 6
+        width: 26
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88fbf15f6885ec710800000000000000
+      internalID: 1715405844736098184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knokky_15
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 6
+        width: 25
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e608ea375a9bf7d0800000000000000
+      internalID: -2883541436959553820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knokky_16
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 6
+        width: 26
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cff1dfc3dfea1400800000000000000
+      internalID: 295812418549972935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knokky_17
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 6
+        width: 25
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8303e7d326247e8b0800000000000000
+      internalID: -5123053061404741576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knokky_18
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 6
+        width: 25
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 079d8380048597f30800000000000000
+      internalID: 4573783928610543984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knokky_19
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 6
+        width: 25
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fdb426ec49ec9670800000000000000
+      internalID: 8546962709330312695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: fe8fe5615c728e44893bf8bae699db4b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      knokky_0: -4653182581575468152
+      knokky_1: -2334434040848662015
+      knokky_10: -9175647376179373457
+      knokky_11: 3832764270698650827
+      knokky_12: -1881207806603996071
+      knokky_13: -3384289778303024658
+      knokky_14: 1715405844736098184
+      knokky_15: -2883541436959553820
+      knokky_16: 295812418549972935
+      knokky_17: -5123053061404741576
+      knokky_18: 4573783928610543984
+      knokky_19: 8546962709330312695
+      knokky_2: 7153655348779792283
+      knokky_3: 2529363443818896156
+      knokky_4: 6160424658747142796
+      knokky_5: -6667487873818475508
+      knokky_6: 1356725747495379220
+      knokky_7: -4221842490136734348
+      knokky_8: -1749125966365627615
+      knokky_9: -1834596977921294394
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

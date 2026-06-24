@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Enemy : Character, IInteractable
 {
@@ -12,9 +13,11 @@ public class Enemy : Character, IInteractable
 
     public string InteractionText => "ав©Ё!";
 
+    public event Action OnDead;
+
     public void Interact(Player player)
     {
-        Debug.Log($"{name} ав╢ы");
+        OnDead?.Invoke();
         Destroy(gameObject);
     }
 }

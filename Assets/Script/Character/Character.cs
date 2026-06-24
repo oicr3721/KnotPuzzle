@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Windows;
@@ -15,6 +15,8 @@ public abstract class Character : MonoBehaviour
     protected Vector2 facingDirection = Vector2.right;
     public SpriteRenderer SpriteRenderer => spriteRenderer;
     public Animator Animator => animator;
+
+    public static event Action OnPlayerMove;
 
     public abstract bool CanMove { get; }
 
@@ -45,6 +47,9 @@ public abstract class Character : MonoBehaviour
             input != Vector2.zero
         );
 
+        if (input != Vector2.zero)
+            OnPlayerMove?.Invoke();
+
         Flip(input);
     }
 
@@ -58,7 +63,7 @@ public abstract class Character : MonoBehaviour
             ? Vector2.left
             : Vector2.right;
 
-        spriteRenderer.flipX = facingDirection == Vector2.left;
+        spriteRenderer.flipX = facingDirection == Vector2.right;
     }
 
     protected virtual void Tick() { }
