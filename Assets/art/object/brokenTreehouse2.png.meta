@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8132f6287bd8b3c47b6963368193bd00
+guid: e2822af91af819a4da368215d60cdc0c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8047017190985772053
-    second: tigerground1_0
+      213: 1819141539265001179
+    second: brokenTreehouse2_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 12
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tigerground1_0
+      name: brokenTreehouse2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: be3d4ddef70435090800000000000000
-      internalID: -8047017190985772053
+      spriteID: bd63c0c7793ee3910800000000000000
+      internalID: 1819141539265001179
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tigerground1_0: -8047017190985772053
+      brokenTreehouse2_0: 1819141539265001179
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
