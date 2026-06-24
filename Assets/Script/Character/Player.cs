@@ -91,7 +91,7 @@ public class Player : Character
 
     public IEnumerator CompleteRopeConnect()
     {
-        audioSource.PlayOneShot(knotSound); 
+        audioSource.PlayOneShot(knotSound, 2.0f); 
 
         yield return StartCoroutine(knotSelector.SelectUseKnot());
 
@@ -114,7 +114,7 @@ public class Player : Character
 
     public void GetKnot()
     {
-        audioSource.PlayOneShot(knotSound);
+        audioSource.PlayOneShot(knotSound, 2.0f);
         StartCoroutine(knotSelector.SelectGetKnot());
     }
 
