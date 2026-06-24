@@ -2,12 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public enum PlayerState
 {
     None,
     RopeReady,
-    Select
+    Select,
+    RopeWalk
 }
 
 public enum KnotType
@@ -19,19 +21,22 @@ public enum KnotType
 
 public class Player : Character
 {
+    public static Player Instance { get; private set; }
+
     [Header("State")]
     [SerializeField] private PlayerState state = PlayerState.None;
-    [Header("State")]
     [SerializeField] private KnotSelector knotSelector;
 
-    private int knotCount = 3;
+    [Header("Component")]
+    [SerializeField] private GameObject darknessMask;
+
     public PlayerState PlayerState => state;
 
     private RopeAttachableTile ropeHolder;
     public RopeAttachableTile RopeHolder => ropeHolder;
     public override bool CanMove => 
         (state == PlayerState.None)
-        && knotState[KnotType.Legs] == true;
+        && (knotState[KnotType.Legs] == true);
 
     private Dictionary<KnotType, bool> knotState = new Dictionary<KnotType, bool>
     {
@@ -42,11 +47,19 @@ public class Player : Character
 
     public Dictionary<KnotType, bool> KnotState => knotState;
 
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(this);
+    }
+
     public void ReadyRope(RopeAttachableTile ropeAttachable)
     {
         if (ropeAttachable == null) 
             return;
-        if (knotCount <= 0)
+        if (!knotState.Any(x => x.Value))
             return;
 
         ropeHolder = ropeAttachable;
@@ -78,11 +91,16 @@ public class Player : Character
     public void EquipKnot(KnotType knot)
     {
         knotState[knot] = true;
+        if (knot == KnotType.Eyes)
+            darknessMask.SetActive(false);
     }
 
     public void UseKnot(KnotType knot)
     {
         knotState[knot] = false;
+        if(knot == KnotType.Eyes)
+            darknessMask.SetActive(true);
+
     }
 
     public void SetPlayerState(PlayerState state)

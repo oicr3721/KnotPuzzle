@@ -9,16 +9,15 @@ public class PlayerInteractor : MonoBehaviour
     [SerializeField] private Transform mousePoint;
     [SerializeField] private float interactRange = 2f;
     [SerializeField] private float detectRadius = 0.3f;
-
     [SerializeField] private LayerMask interactableMask;
 
     [Header("UI")]
     [SerializeField] private GameObject interactionPrompt;
     [SerializeField] private TextMeshProUGUI interactionText;
 
+
     private bool canInteract =>
-        (player.PlayerState != PlayerState.None)
-        && (player.KnotState[KnotType.Arms] == true);
+        (player.PlayerState == PlayerState.None);
 
     private Camera cam;
     private IInteractable target;

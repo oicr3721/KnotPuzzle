@@ -8,9 +8,33 @@ public class RopeBridge : MonoBehaviour, IInteractable
     private IRopeAttachable holderA;
     private IRopeAttachable holderB;
 
+    [SerializeField] private CapsuleCollider2D ropeCollider;
+    [SerializeField] private float ropeWidth = 0.5f;
+
     [SerializeField] private LineRenderer line;
 
-    public bool CanInteract => enabled;
+    public bool CanInteract
+    {
+        get
+        {
+            if (ropeDir == RopeDir.Vertical)
+            {
+                if (Player.Instance.KnotState[KnotType.Arms])
+                    return true;
+                else
+                    return false;
+            }
+            else if (ropeDir == RopeDir.Horizontal)
+            {
+                if (Player.Instance.KnotState[KnotType.Legs])
+                    return true;
+                else
+                    return false;
+            }
+            else
+                return false;
+        }
+    }
 
     public Transform InteractionPoint => transform;
 
@@ -27,6 +51,35 @@ public class RopeBridge : MonoBehaviour, IInteractable
 
         if (holderB != null)
             holderB.OnRopeBridgeAttached(this);
+
+        if (holder.AttachedPoint.TryGetComponent<RopeAttachableTile>(out var attachable))
+            ropeDir = attachable.RopeDir;
+
+        SetupCollider();
+        UpdateCollider(holderA.AttachedPoint.position, holderB.AttachedPoint.position);
+    }
+    private void SetupCollider()
+    {
+        if (ropeCollider == null)
+            ropeCollider = gameObject.AddComponent<CapsuleCollider2D>();
+
+        ropeCollider.isTrigger = true;
+    }
+
+    private void UpdateCollider(Vector2 a, Vector2 b)
+    {
+        Vector2 mid = (a + b) * 0.5f;
+        Vector2 dir = b - a;
+
+        float distance = dir.magnitude;
+
+        ropeCollider.transform.position = mid;
+
+        ropeCollider.size = new Vector2(distance, ropeWidth);
+        ropeCollider.direction = CapsuleDirection2D.Horizontal;
+
+        ropeCollider.transform.rotation =
+            Quaternion.FromToRotation(Vector3.right, dir);
     }
 
     private void LateUpdate()
@@ -77,6 +130,8 @@ public class RopeBridge : MonoBehaviour, IInteractable
 
     private IEnumerator MoveAlongRope(Player player, Transform start, Transform end)
     {
+        player.SetPlayerState(PlayerState.RopeWalk);
+
         // 필요하면 플레이어 컨트롤 잠금
         float t = 0f;
         float duration = 1.5f; // 이동 속도
@@ -100,7 +155,29 @@ public class RopeBridge : MonoBehaviour, IInteractable
 
         player.transform.position = endPos;
 
+        SnapToEndTop(player, end);
+
         // 컨트롤 복구
         player.enabled = true;
+
+        player.SetPlayerState(PlayerState.None);
+    }
+    private void SnapToEndTop(Player player, Transform end)
+    {
+        Collider2D col = end.GetComponent<Collider2D>();
+        if (col == null) return;
+
+        Bounds b = col.bounds;
+
+        Vector2 targetPos = new Vector2(
+            b.center.x,
+            b.max.y
+        );
+
+        // 플레이어가 collider 위에 "서게" 살짝 올림
+        float playerOffset = 0.1f;
+        targetPos.y += playerOffset;
+
+        player.transform.position = targetPos;
     }
 }
