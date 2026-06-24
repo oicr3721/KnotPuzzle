@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Windows;
 
-public class Character : MonoBehaviour
+public abstract class Character : MonoBehaviour
 {
     [Header("Visual")]
     [SerializeField] protected SpriteRenderer spriteRenderer;
@@ -16,12 +16,12 @@ public class Character : MonoBehaviour
     public SpriteRenderer SpriteRenderer => spriteRenderer;
     public Animator Animator => animator;
 
+    public abstract bool CanMove { get; }
 
-    private bool movementLock = false;
     private Vector2 moveInput;
     protected void Update()
     {
-        if (movementLock) return;
+        if (!CanMove) return;
 
         Vector3 move =
             (Vector3)moveInput *
@@ -36,7 +36,7 @@ public class Character : MonoBehaviour
     Vector2 prevInput;
     public void SetMoveInput(Vector2 input)
     {
-        if(movementLock) return;
+        if(!CanMove) return;
 
         moveInput = input;
 
@@ -61,9 +61,5 @@ public class Character : MonoBehaviour
         spriteRenderer.flipX = facingDirection == Vector2.left;
     }
 
-    protected void SetMovementLock(bool movementLock)
-    {
-        this.movementLock = movementLock;
-    }
     protected virtual void Tick() { }
 }

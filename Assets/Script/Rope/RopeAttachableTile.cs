@@ -8,57 +8,44 @@ public enum RopeDir
 
 public class RopeAttachableTile : MonoBehaviour, IRopeAttachable, IInteractable
 {
-    private bool attached = false;
-
     public Transform AttachedPoint => transform;
     public string InteractionText {
         get
         {
-            if (attached) return "¸Åµì ¼ö°Å";
-            else return "¸Åµì ¹­±â";
+            if (attachedRopeBridge == null) return "¸Åµì ¹­±â";
+            else return "¸Åµì ¼ö°Å";
         }
     }
-    public bool CanInteract => attached == false;
+    public bool CanInteract => true;
     public Transform InteractionPoint => this.transform;
-    public bool Attached => attached;
 
     private RopeBridge attachedRopeBridge;
     public RopeBridge AttachedRopeBridge => attachedRopeBridge;
 
-    private RopeDir ropeDir;
+    [SerializeField] private RopeDir ropeDir;
     public RopeDir RopeDir => ropeDir;
 
     public void Interact(Player player)
     {
         if (attachedRopeBridge == null)
         {
-            player.SetRopeHoldTarget(this);
+            player.ReadyRope(this);
         }
         else
         {
-            player.GetRope();
+            attachedRopeBridge.DestroyBridge();
+            player.GetKnot();
         }
-    }
-
-    public void OnRopeAttached(RopeBridge bridge)
-    {
-        attached = true;
-    }
-
-    public void OnRopeDetached(RopeBridge bridge)
-    {
-        attached = false;
-
-        attachedRopeBridge.DestroyBridge();
     }
 
     public void OnRopeBridgeAttached(RopeBridge bridge)
     {
-        throw new System.NotImplementedException();
+        attachedRopeBridge = bridge;
     }
 
     public void OnRopeBridgeDetached(RopeBridge bridge)
     {
-        throw new System.NotImplementedException();
+        if(attachedRopeBridge == bridge)
+            attachedRopeBridge = null;
     }
 }

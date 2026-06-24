@@ -12,13 +12,8 @@ public class PlayerMoveController : MonoBehaviour
     [Header("Character")]
     [SerializeField] private Character player;
 
-    private bool isMovementLocked = false;
-
     public void MoveInput(InputAction.CallbackContext context)
     {
-        if (isMovementLocked)
-            return;
-
         Vector2 raw = context.ReadValue<Vector2>();
 
         Vector2 input =
@@ -32,20 +27,5 @@ public class PlayerMoveController : MonoBehaviour
         input.y = 0;
 
         player.SetMoveInput(input);
-    }
-
-    public void LockMovement()
-    {
-        player.Animator.SetBool(
-            "Moving",
-            false
-        );
-
-        isMovementLocked = true;
-    }
-
-    public void UnLockMovement()
-    {
-        isMovementLocked = false;
     }
 }
