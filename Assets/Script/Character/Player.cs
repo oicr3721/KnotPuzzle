@@ -88,6 +88,7 @@ public class Player : Character
         SetPlayerState(PlayerState.None);
 
         OnRopeConnected?.Invoke();
+        animator.SetTrigger("Tie");
     }
 
     public void CancleRopeConnect()

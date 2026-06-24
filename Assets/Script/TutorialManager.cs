@@ -51,34 +51,37 @@ public class TutorialManager : MonoBehaviour
         switch (step)
         {
             case 0:
-                typewriter.StartTyping("A,D로 이동해보세요.");
+                typewriter.StartTyping("A, D 키를 눌러 걸어보려무나.");
                 break;
 
             case 1:
-                typewriter.StartTyping("못 근처에서 F를 눌러 로프를 준비하세요.");
+                typewriter.StartTyping("무서~운 못 근처에서 F 키를 눌러 네 매듭을 묶어보려무나.");
                 break;
 
             case 2:
-                typewriter.StartTyping("다른 못을 클릭해 로프를 연결하세요.\n" +
-                    "수직 못은 수직 못끼리만, 수평 못은 수평 못끼리만 연결 가능합니다.");
+                typewriter.StartTyping("근처의 다른 못을 클릭하여 네 매듭을 이어보려무나\n" +
+                    "수직 못은 수직으로만, 수평 못은 수평으로만 이을 수 있단다.");
                 break;
 
             case 3:
-                typewriter.StartTyping("연결된 로프에 마우스를 가져다대고 F를 눌러보세요.\n" +
-                    "수직 로프는 팔 매듭이 있어야만 탈 수 있습니다. 매듭이 묶인 못에 마우스를 대고 F를 누르면 회수할 수 있습니다.");
+                typewriter.StartTyping("연결된 매듭에 커서를 대고 F 키를 눌러보려무나.\n" +
+                    "수직 로프는 네 팔 매듭이 네 몸에 제대로 붙어있을 때만 탈 수 있단다.\n" +
+                    "매듭이 묶인 못에 커서를 대고, F키를 누르면 네 매듭을 다시 가져올 수 있단다.");
                 break;
 
             case 4:
-                typewriter.StartTyping("매듭을 회수해보세요.");
+                typewriter.StartTyping("매듭을 회수해보렴.");
                 break;
             case 5:
-                typewriter.StartTyping("수평 못들을 연결해 오른쪽으로 넘어가보세요. 수평 로프는 다리 매듭이 있어야만 줄을 탈 수 있습니다.");
+                typewriter.StartTyping("수평 못을 연결해서 오른쪽으로 넘어가보려무나.\n" +
+                    "수평 로프는 네 다리 매듭이 네 몸에 제대로 붙어있을 때만 탈 수 있단다.");
                 break;
             case 6:
-                typewriter.StartTyping("와 도착! 이제 저 놈을 죽이자!");
+                typewriter.StartTyping("도착했구나! 이제 사악한 저 악마를 죽여보자꾸나.");
                 break;
             case 7:
-                typewriter.StartTyping("잘했으. 튜토리얼 끝!");
+                typewriter.StartTyping("아주 잘했단다.\n" +
+                    "지금부터 펼쳐질 이야기를 충분히 즐기고 돌아오렴!");
                 break;
         }
     }
