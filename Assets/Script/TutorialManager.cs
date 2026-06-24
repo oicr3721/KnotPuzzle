@@ -1,10 +1,16 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TutorialManager : MonoBehaviour
 {
     public static TutorialManager Instance;
 
     [SerializeField] private TypewriterEffect typewriter;
+    [SerializeField] private TutorialCollider rightZone;
+    [SerializeField] private Enemy enemy;
+
+    [SerializeField] private float endDelay = 1.5f;
 
     private int step = 0;
 
@@ -20,6 +26,8 @@ public class TutorialManager : MonoBehaviour
         Player.OnRopeConnected += HandleRopeConnect;
         Player.OnRopeUsed += HandleRopeUse;
         Player.OnKnotCollected += HandleKnot;
+        rightZone.OnPlayerEnter += HandleRightZoneEnter;
+        enemy.OnDead += HandleEnemyDead;
     }
 
     private void OnDisable()
@@ -29,6 +37,8 @@ public class TutorialManager : MonoBehaviour
         Player.OnRopeConnected -= HandleRopeConnect;
         Player.OnRopeUsed -= HandleRopeUse;
         Player.OnKnotCollected -= HandleKnot;
+        rightZone.OnPlayerEnter -= HandleRightZoneEnter;
+        enemy.OnDead -= HandleEnemyDead;
     }
 
     private void Start()
@@ -59,10 +69,16 @@ public class TutorialManager : MonoBehaviour
                 break;
 
             case 4:
-                typewriter.StartTyping("매듭을 회수해보세요. 매듭은 ");
+                typewriter.StartTyping("매듭을 회수해보세요.");
                 break;
             case 5:
-                typewriter.StartTyping("매듭을 회수해보세요.");
+                typewriter.StartTyping("수평 못들을 연결해 오른쪽으로 넘어가보세요. 수평 로프는 다리 매듭이 있어야만 줄을 탈 수 있습니다.");
+                break;
+            case 6:
+                typewriter.StartTyping("와 도착! 이제 저 놈을 죽이자!");
+                break;
+            case 7:
+                typewriter.StartTyping("잘했으. 튜토리얼 끝!");
                 break;
         }
     }
@@ -96,5 +112,25 @@ public class TutorialManager : MonoBehaviour
     private void HandleKnot()
     {
         if (step == 4) Next();
+    }
+
+    private void HandleRightZoneEnter()
+    {
+        if(step == 5) Next();
+    }
+
+    private void HandleEnemyDead()
+    {
+        if (step == 6) Next();
+
+        StartCoroutine(CoTutorialEnd());
+    }
+
+    private IEnumerator CoTutorialEnd()
+    {
+        yield return new WaitForSeconds(endDelay);
+
+        //FadeManager.LoadSceneWithFade("GameScene");
+
     }
 }
