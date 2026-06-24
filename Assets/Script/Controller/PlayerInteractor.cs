@@ -10,6 +10,7 @@ public class PlayerInteractor : MonoBehaviour
     [SerializeField] private float interactRange = 2f;
     [SerializeField] private float detectRadius = 0.3f;
     [SerializeField] private LayerMask interactableMask;
+    [SerializeField] private Vector3 offset = Vector3.zero;
 
     [Header("UI")]
     [SerializeField] private GameObject interactionPrompt;
@@ -56,7 +57,7 @@ public class PlayerInteractor : MonoBehaviour
 
         mouseWorldPos.z = 0f;
 
-        Vector2 playerPos = player.transform.position;
+        Vector2 playerPos = player.transform.position + offset;
         Vector2 dir = mouseWorldPos - (Vector3)playerPos;
 
         if (dir.magnitude > interactRange)
@@ -137,7 +138,7 @@ public class PlayerInteractor : MonoBehaviour
         {
             Gizmos.color = Color.cyan;
             Gizmos.DrawWireSphere(
-                player.transform.position,
+                player.transform.position + offset,
                 interactRange);
         }
     }
