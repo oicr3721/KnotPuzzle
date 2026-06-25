@@ -35,6 +35,7 @@ public abstract class Character : MonoBehaviour
         Tick();
     }
 
+
     Vector2 prevInput;
     public void SetMoveInput(Vector2 input)
     {
