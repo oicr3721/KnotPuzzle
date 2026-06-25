@@ -83,10 +83,7 @@ public class Player : Character
             Destroy(this);
     }
     
-    private void Update()
-    {
-        HandleFootstep();
-    }
+   
     public void ReadyRope(RopeAttachableTile ropeAttachable)
     {
         if (ropeAttachable == null) 
@@ -98,7 +95,7 @@ public class Player : Character
         SetPlayerState(PlayerState.RopeReady);
     }
 
-    private void HandleFootstep()
+    protected override void Tick()
     {
         bool isMoving = Input.GetAxisRaw("Horizontal") != 0 ||
                         Input.GetAxisRaw("Vertical") != 0;

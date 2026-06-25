@@ -6205,7 +6205,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5124267472823460174, guid: d15329e70835fc14bb2a8f52e7a1fecb, type: 3}
       propertyPath: ropeDir
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7827911360843905760, guid: d15329e70835fc14bb2a8f52e7a1fecb, type: 3}
       propertyPath: m_LocalScale.x
@@ -7032,7 +7032,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5124267472823460174, guid: d15329e70835fc14bb2a8f52e7a1fecb, type: 3}
       propertyPath: ropeDir
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7827911360843905760, guid: d15329e70835fc14bb2a8f52e7a1fecb, type: 3}
       propertyPath: m_LocalScale.x
