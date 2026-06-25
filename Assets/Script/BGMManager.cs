@@ -7,27 +7,7 @@ public class BGMManager : MonoBehaviour
 {
     public static BGMManager instance;
 
-    [SerializeField] private AudioClip[] clips;
-
-    private AudioSource[] bgmLayers;
-
-    private void Start()
-    {
-        bgmLayers = new AudioSource[clips.Length];
-
-        /*
-        for (int i = 0; i < clips.Length; i++)
-        {
-            AudioSource source = gameObject.AddComponent<AudioSource>();
-
-            source.clip = clips[i];
-            source.loop = true;
-            //source.Play();
-
-            bgmLayers[i] = source;
-        }*/
-
-    }
+    public List<AudioSource> bgms;
 
     void Awake()
     {
@@ -37,52 +17,48 @@ public class BGMManager : MonoBehaviour
             return;
         }
 
+        
         instance = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void SetBgm(int index, bool setting)
+    {
+        bgms[index].volume = setting ? 1f : 0f;
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         string sceneName = SceneManager.GetActiveScene().name;
-        AudioSource source = gameObject.AddComponent<AudioSource>();
-        bgmLayers = new AudioSource[clips.Length];
+        Debug.Log(sceneName);
 
-        if (sceneName == "Main")
-        {
-            source.clip = clips[0];
-            source.loop = true;
-            source.Play();
+        //    if (sceneName == "Main")
+        //    {
+        //        bgm1.volume = 0.0f;
+        //        bgm4.volume = 0.0f;
+        //        bgm3.volume = 0.0f;
+        //        bgm1.Play();
+        //        bgm2.Play();
+        //        bgm3.Play();
+        //        bgm4.Play();
 
-        }
+        //    }
 
-        else if(sceneName == "Stage1")
-        {
-            source.clip = clips[1];
-            source.loop = true;
-            source.Play();
-            source.clip = clips[2];
-            source.loop = true;
-            source.Play();
-            source.clip = clips[3];
-            source.loop = true;
-            source.Play();
-        }
+        //    else if(sceneName == "Stage1")
+        //    {
+        //        bgm2.Play();
+        //        bgm3.Play();
+        //        bgm4.Play();
+        //    }
 
-        else if(sceneName == "Chapter0")
-        {
-            source.clip = clips[0];
-            source.Stop();
-        }
+        //    else if(sceneName == "Chapter0")
+        //    {
+        //        bgm2.Play();
+        //        bgm3.Play();
+        //        bgm4.Play();
+        //    }
     }
 
-    public void PlayBGM(AudioClip clip)
-    {
-        AudioSource source = gameObject.AddComponent<AudioSource>();
 
-        if (source.clip == clip) return;
-
-        source.clip = clip;
-        source.Play();
-    }
 
 }
