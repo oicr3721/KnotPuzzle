@@ -49,7 +49,7 @@ public class BGMManager : MonoBehaviour
 
         if (sceneName == "Main")
         {
-            source.clip = clips[1];
+            source.clip = clips[0];
             source.loop = true;
             source.Play();
 
@@ -57,7 +57,7 @@ public class BGMManager : MonoBehaviour
 
         else if(sceneName == "Stage1")
         {
-            source.clip = clips[0];
+            source.clip = clips[1];
             source.loop = true;
             source.Play();
             source.clip = clips[2];
@@ -66,6 +66,12 @@ public class BGMManager : MonoBehaviour
             source.clip = clips[3];
             source.loop = true;
             source.Play();
+        }
+
+        else if(sceneName == "Chapter0")
+        {
+            source.clip = clips[0];
+            source.Stop();
         }
     }
 
