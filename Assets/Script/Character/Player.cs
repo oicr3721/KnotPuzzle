@@ -38,6 +38,10 @@ public class Player : Character
 
     [Header("Component")]
     [SerializeField] private GameObject darknessMask;
+    
+    [SerializeField] private AudioClip knotSound;
+    private AudioSource[] audioSource;
+    [SerializeField] private AudioClip walkSound;
 
     public static event Action OnRopeReady;
     public static event Action OnRopeConnected;
@@ -61,6 +65,11 @@ public class Player : Character
 
     public Dictionary<KnotType, bool> KnotState => knotState;
 
+    private void Start()
+    {
+        audioSource = GetComponents<AudioSource>();
+    }
+
     private void Awake()
     {
         if (Instance == null)
@@ -69,6 +78,10 @@ public class Player : Character
             Destroy(this);
     }
 
+    private void Update()
+    {
+        HandleFootstepSound();
+    }
     public void ReadyRope(RopeAttachableTile ropeAttachable)
     {
         if (ropeAttachable == null) 
@@ -82,6 +95,8 @@ public class Player : Character
 
     public IEnumerator CompleteRopeConnect()
     {
+        audioSource[0].PlayOneShot(knotSound, 4.0f);
+
         yield return StartCoroutine(knotSelector.SelectUseKnot());
 
         ropeHolder = null;
@@ -101,6 +116,7 @@ public class Player : Character
 
     public void GetKnot()
     {
+        audioSource[0].PlayOneShot(knotSound, 4.0f);
         StartCoroutine(knotSelector.SelectGetKnot());
     }
 
