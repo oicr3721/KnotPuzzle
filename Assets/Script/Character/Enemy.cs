@@ -9,8 +9,9 @@ public class Enemy : Character, IInteractable
     [SerializeField] private PlayableDirector director;
     public override bool CanMove => true;
 
-    public bool CanInteract => true;
+    public bool CanInteract => canInteract;
 
+    [SerializeField] private bool canInteract = true;
     public Transform InteractionPoint => transform;
 
     [SerializeField] private string interactionText = "Á×¿³!";
