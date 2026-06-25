@@ -43,6 +43,11 @@ public class Player : Character
     private AudioSource[] audioSource;
     [SerializeField] private AudioClip walkSound;
 
+    [SerializeField] private float footstepInterval = 0.4f;
+
+    private float moveTimer;
+
+
     public static event Action OnRopeReady;
     public static event Action OnRopeConnected;
     public static event Action OnRopeUsed;
@@ -77,10 +82,10 @@ public class Player : Character
         else
             Destroy(this);
     }
-
+    
     private void Update()
     {
-        HandleFootstepSound();
+        HandleFootstep();
     }
     public void ReadyRope(RopeAttachableTile ropeAttachable)
     {
@@ -91,6 +96,31 @@ public class Player : Character
 
         ropeHolder = ropeAttachable;
         SetPlayerState(PlayerState.RopeReady);
+    }
+
+    private void HandleFootstep()
+    {
+        bool isMoving = Input.GetAxisRaw("Horizontal") != 0 ||
+                        Input.GetAxisRaw("Vertical") != 0;
+
+        if (isMoving)
+        {
+            moveTimer += Time.deltaTime;
+
+            if (!audioSource[1].isPlaying)
+                audioSource[1].Play();
+
+            if (moveTimer >= footstepInterval)
+            {
+                moveTimer = 0f;
+                audioSource[1].PlayOneShot(walkSound);
+            }
+        }
+        else
+        {
+            moveTimer = 0f;
+            audioSource[1].Stop();
+        }
     }
 
     public IEnumerator CompleteRopeConnect()
