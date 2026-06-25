@@ -2049,6 +2049,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7348110397957725685, guid: 4d7b80d6c2231824bb544ae93ea5caf4, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 43a03fbf1b84d394d853db8b18d8e4f1, type: 3}
+    - target: {fileID: 283487659921340274, guid: 4d7b80d6c2231824bb544ae93ea5caf4, type: 3}
+      propertyPath: knotSound
+      value: 
+      objectReference: {fileID: 8300000, guid: cfac566a6d83f7344af037f250035482, type: 3}
+    - target: {fileID: 283487659921340274, guid: 4d7b80d6c2231824bb544ae93ea5caf4, type: 3}
+      propertyPath: walkSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 43a03fbf1b84d394d853db8b18d8e4f1, type: 3}
     - target: {fileID: 283487659921340274, guid: 4d7b80d6c2231824bb544ae93ea5caf4, type: 3}
       propertyPath: darknessMask
       value: 
@@ -5797,6 +5809,7 @@ MonoBehaviour:
   moveSpeed: 1
   director: {fileID: 1437774104}
   interactionText: "\uC8FD\uC774\uAE30"
+  deadDestroy: 0
   nextChapterName: Chapter3
 --- !u!4 &1437774102
 Transform:

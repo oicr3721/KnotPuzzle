@@ -749,6 +749,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7348110397957725685, guid: 4d7b80d6c2231824bb544ae93ea5caf4, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 43a03fbf1b84d394d853db8b18d8e4f1, type: 3}
+    - target: {fileID: 283487659921340274, guid: 4d7b80d6c2231824bb544ae93ea5caf4, type: 3}
+      propertyPath: knotSound
+      value: 
+      objectReference: {fileID: 8300000, guid: cfac566a6d83f7344af037f250035482, type: 3}
+    - target: {fileID: 283487659921340274, guid: 4d7b80d6c2231824bb544ae93ea5caf4, type: 3}
+      propertyPath: walkSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 43a03fbf1b84d394d853db8b18d8e4f1, type: 3}
     - target: {fileID: 283487659921340274, guid: 4d7b80d6c2231824bb544ae93ea5caf4, type: 3}
       propertyPath: darknessMask
       value: 
@@ -1726,6 +1738,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5073915704613791854, guid: 4d7b80d6c2231824bb544ae93ea5caf4, type: 3}
   m_PrefabInstance: {fileID: 286016506}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &734943104
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7516588459301273916, guid: 44116221bfb557444ac85e10595ea7ff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 60.88341
+      objectReference: {fileID: 0}
+    - target: {fileID: 7516588459301273916, guid: 44116221bfb557444ac85e10595ea7ff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 40.997154
+      objectReference: {fileID: 0}
+    - target: {fileID: 7516588459301273916, guid: 44116221bfb557444ac85e10595ea7ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.56205714
+      objectReference: {fileID: 0}
+    - target: {fileID: 7516588459301273916, guid: 44116221bfb557444ac85e10595ea7ff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7516588459301273916, guid: 44116221bfb557444ac85e10595ea7ff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7516588459301273916, guid: 44116221bfb557444ac85e10595ea7ff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7516588459301273916, guid: 44116221bfb557444ac85e10595ea7ff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7516588459301273916, guid: 44116221bfb557444ac85e10595ea7ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7516588459301273916, guid: 44116221bfb557444ac85e10595ea7ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7516588459301273916, guid: 44116221bfb557444ac85e10595ea7ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8808982649465264033, guid: 44116221bfb557444ac85e10595ea7ff, type: 3}
+      propertyPath: m_Name
+      value: BGMManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44116221bfb557444ac85e10595ea7ff, type: 3}
 --- !u!1001 &802010845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2204,7 +2273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &992455377
 Transform:
   m_ObjectHideFlags: 0
@@ -4749,7 +4818,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1386112465
 Transform:
   m_ObjectHideFlags: 0
@@ -6617,3 +6686,4 @@ SceneRoots:
   - {fileID: 715342879}
   - {fileID: 1818727777}
   - {fileID: 959104045}
+  - {fileID: 734943104}
