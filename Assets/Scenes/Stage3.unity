@@ -5140,10 +5140,13 @@ PlayableDirector:
     value: {fileID: 1894373607}
   - key: {fileID: -5728883771267521941, guid: 49469885a88b75346bd175f1a4affc20, type: 2}
     value: {fileID: 1437774099}
+  - key: {fileID: -8882202233953963639, guid: 49469885a88b75346bd175f1a4affc20, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - bf0e4dff1d93dd0458e9b75b6bf1ad40: {fileID: 383399226}
     - e915fb0fa1ced394bb66d111eaf04df7: {fileID: 1870311274}
+    - 0ee790330c5317a48a04e7b01cdb644e: {fileID: 383399226}
 --- !u!1 &1456491178
 GameObject:
   m_ObjectHideFlags: 0
