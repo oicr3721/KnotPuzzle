@@ -769,6 +769,14 @@ PrefabInstance:
       propertyPath: knotSelector
       value: 
       objectReference: {fileID: 1374820523}
+    - target: {fileID: 283487659921340274, guid: 4d7b80d6c2231824bb544ae93ea5caf4, type: 3}
+      propertyPath: noKnots.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 283487659921340274, guid: 4d7b80d6c2231824bb544ae93ea5caf4, type: 3}
+      propertyPath: 'noKnots.Array.data[0]'
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1827687851773098177, guid: 4d7b80d6c2231824bb544ae93ea5caf4, type: 3}
       propertyPath: interactionText
       value: 
@@ -5061,6 +5069,7 @@ MonoBehaviour:
   animator: {fileID: 1437774099}
   moveSpeed: 1
   director: {fileID: 1437774104}
+  canInteract: 1
   interactionText: "\uBD80\uC218\uAE30"
   deadDestroy: 0
   nextChapterName: Ending

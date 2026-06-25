@@ -68,11 +68,18 @@ public class Player : Character
         {KnotType.Legs, true}
     };
 
+    [SerializeField] private List<KnotType> noKnots;
+
     public Dictionary<KnotType, bool> KnotState => knotState;
 
     private void Start()
     {
         audioSource = GetComponents<AudioSource>();
+
+        foreach(var knot in noKnots)
+        {
+            UseKnot(knot);
+        }
     }
 
     private void Awake()
@@ -154,6 +161,8 @@ public class Player : Character
             darknessMask.SetActive(false);
 
         OnKnotCollected?.Invoke();
+
+        SetAnimator();
     }
 
     public void UseKnot(KnotType knot)
@@ -161,6 +170,8 @@ public class Player : Character
         knotState[knot] = false;
         if(knot == KnotType.Eyes)
             darknessMask.SetActive(true);
+
+        SetAnimator();
 
     }
 

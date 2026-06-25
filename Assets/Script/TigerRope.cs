@@ -18,7 +18,7 @@ public class TigerRope : MonoBehaviour, IInteractable
     public void Interact(Player player)
     {
         screwRenderer.sprite = screwKnot;
-        ropeRenderer.enbled = true;
+        ropeRenderer.enabled = true;
 
         player.UseKnot(KnotType.Arms);
         Tiger.Interact(player);
